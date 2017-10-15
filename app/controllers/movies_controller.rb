@@ -10,6 +10,9 @@ def show
   @movie = Movie.find(id) # look up movie by unique ID
   # will render app/views/movies/show.html.haml by default
 end
+def new
+  @movie = Movie.new
+end
 def create
     #@movie = Movie.create!(params[:movie]) #old way
     @movie = Movie.create!(movie_params)  # new way
